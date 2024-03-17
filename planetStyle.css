@@ -1,0 +1,189 @@
+.destination{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 100vh;
+    width: 100%;
+    align-items: center;
+}
+
+.planet{
+    width: 30em;
+    height: 30em;
+    background-image: url(./assets/planets/earth.jpg);
+    box-shadow: inset -10em -10em 10em #000, -0.5em -0.5em 1em #f0d08b;
+    position: relative;
+    right: -15%;
+    animation: rotate 30s linear infinite;
+    transition: background-image 1s;
+}
+
+.earth-moon{
+    background-image: url(./assets/planets/moon.jpg);
+    box-shadow: inset -1.5em -1.5em 1.5em #000, -0.5em -0.5em 1em #ccc;
+    width: 8em;
+    height: 8em;
+    position: absolute;
+    left: -11em;
+    top: 50%;
+    transform: translateY(-50%);
+    animation: 
+    rotate 5s linear infinite,
+    orbit 20s infinite ease-in-out;
+    z-index: 1;
+}
+
+.mars-moon-1{
+    display: none;
+    background-image: url(./assets/planets/phobos.jpg);
+    box-shadow: inset -1.5em -1.5em 1.5em #000, -0.5em -0.5em 1em #ccc;
+    width: 2em;
+    height: 2em;
+    position: absolute;
+    left: -11em;
+    top: 75%;
+    transform: translateY(-50%);
+    animation: 
+    rotate 5s linear infinite,
+    orbit 20s infinite ease-in-out;
+    z-index: 1;
+}
+
+.mars-moon-2{
+    display: none;
+    background-image: url(./assets/planets/deimos.jpg);
+    box-shadow: inset -1.5em -1.5em 1.5em #000, -0.5em -0.5em 1em #ccc;
+    width: 4em;
+    height: 4em;
+    position: absolute;
+    left: -11em;
+    top: 25%;
+    transform: translateY(-50%);
+    animation: 
+    rotate 5s linear infinite,
+    orbit 20s infinite ease-in-out;
+    z-index: 1;
+}
+
+.jupiter-1{
+    display: none;
+    background-image: url(./assets/planets/deimos.jpg);
+    box-shadow: inset -1.5em -1.5em 1.5em #000, -0.5em -0.5em 1em #ccc;
+    width: 2em;
+    height: 2em;
+    position: absolute;
+    left: -11em;
+    top: 10%;
+    transform: translateY(-50%);
+    animation: 
+    rotate 5s linear infinite,
+    orbit 20s infinite ease-in-out;
+    z-index: 1;
+}
+
+.jupiter-1{
+    display: none;
+    background-image: url(./assets/planets/deimos.jpg);
+    box-shadow: inset -1.5em -1.5em 1.5em #000, -0.5em -0.5em 1em #ccc;
+    width: 2em;
+    height: 2em;
+    position: absolute;
+    left: -11em;
+    top: 20%;
+    transform: translateY(-50%);
+    animation: 
+    rotate 5s linear infinite,
+    orbit 20s infinite ease-in-out;
+    z-index: 1;
+}
+
+.jupiter-2{
+    display: none;
+    background-image: url(./assets/planets/deimos.jpg);
+    box-shadow: inset -1.5em -1.5em 1.5em #000, -0.5em -0.5em 1em #ccc;
+    width: 3em;
+    height: 3em;
+    position: absolute;
+    left: -11em;
+    top: 40%;
+    transform: translateY(-50%);
+    animation: 
+    rotate 5s linear infinite,
+    orbit 20s infinite ease-in-out;
+    z-index: 1;
+}
+
+.jupiter-3{
+    display: none;
+    background-image: url(./assets/planets/deimos.jpg);
+    box-shadow: inset -1.5em -1.5em 1.5em #000, -0.5em -0.5em 1em #ccc;
+    width: 3.5em;
+    height: 3.5em;
+    position: absolute;
+    left: -11em;
+    top: 55%;
+    transform: translateY(-50%);
+    animation: 
+    rotate 5s linear infinite,
+    orbit 20s infinite ease-in-out;
+    z-index: 1;
+}
+
+.jupiter-4{
+    display: none;
+    background-image: url(./assets/planets/deimos.jpg);
+    box-shadow: inset -1.5em -1.5em 1.5em #000, -0.5em -0.5em 1em #ccc;
+    width: 1.5em;
+    height: 1.5em;
+    position: absolute;
+    left: -11em;
+    top: 70%;
+    transform: translateY(-50%);
+    animation: 
+    rotate 5s linear infinite,
+    orbit 20s infinite ease-in-out;
+    z-index: 1;
+}
+
+.jupiter-5{
+    display: none;
+    background-image: url(./assets/planets/deimos.jpg);
+    box-shadow: inset -1.5em -1.5em 1.5em #000, -0.5em -0.5em 1em #ccc;
+    width: 2.5em;
+    height: 2.5em;
+    position: absolute;
+    left: -11em;
+    top: 90%;
+    transform: translateY(-50%);
+    animation: 
+    rotate 5s linear infinite,
+    orbit 20s infinite ease-in-out;
+    z-index: 1;
+}
+
+.planet, .earth-moon, .mars-moon-1, .mars-moon-2, .jupiter-1, .jupiter-2, .jupiter-3, .jupiter-4, .jupiter-5{
+    border-radius: 50%;
+    background-repeat: repeat;
+    background-size: 200% 100%;
+    transition: opacity 1s;
+    opacity: 1;
+}
+
+.earth-moon, .mars-moon-1, .mars-moon-2 {
+    transition: opacity 1s;
+}
+
+@keyframes rotate {
+    to {
+        background-position: -200% 0;
+    }
+}
+
+@keyframes orbit {
+    0% { left: -11em; z-index: 1; box-shadow: inset -1.0em -1.0em 1.0em #000000, -0.5em -0.5em 1em #ccc;}
+    25% { z-index: 1; box-shadow: inset -1.0em -1.0em 1.0em #252525, -0.5em -0.5em 1em #ccc;}
+    49% { z-index: 1; box-shadow: none;}
+    50% { left: 25em; z-index: -1; box-shadow: none;}
+    99%{ z-index: -1; box-shadow: inset -1.0em -1.0em 1.0em #000, -0.5em -0.5em 1em #ccc;}
+    100% { left: -11em; z-index: 1; box-shadow: inset -1.0em -1.0em 1.0em #000, -0.5em -0.5em 1em #ccc;}
+}

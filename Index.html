@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reflight</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="planetStyle.css">
     <link rel="shortcut icon" type="imagex/png" href="./assets/marca-relifght/branco.svg">
 
 <body>
@@ -12,27 +13,64 @@
      <nav>
         <img id="logo" src="./assets/marca-relifght/logotipo.svg" alt="logotipo">
         <span> 
-            <a href="#">Home</a>
-            <a href="#">Galery</a>
-            <a href="#">Team</a>
-            <a href="#">Get</a>
+            <a href="#" class="menu">Home</a>
+            <a href="#" class="menu">Galery</a>
+            <a href="#" class="menu">Team</a>
+            <a href="#" class="menu">Get</a>
          </span>
     </nav>
 
-
     <main>
-        <div>
-            <p class="title">Space explorers </p>
-            <p class="title">living a party</p>
-        </div>
-        <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio quas quos eligendi accusamus rerum. Eum numquam eveniet voluptates exercitationem vero labore, fugiat soluta quidem consequatur voluptatibus eaque deleniti commodi perferendis.</p>
-        <button type="button" id="get-start">Get Started</button>
+        <section class="title-container">
+            <h1 class="title">
+                Space explorers 
+                living a party
+            </h1>
+            <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio quas quos eligendi accusamus rerum. Eum numquam eveniet voluptates exercitationem vero labore, fugiat soluta quidem consequatur voluptatibus eaque deleniti commodi perferendis.</p>
+            <a id="get-started" href="#" class="btn">Get started</a>
+        </section>
+        <section class="destination">
+            <div>
+                <button id="left-button">Left</button>
+                <button id="right-button">Right</button>
+            </div>
+            <div class="planet">
+                <div class="earth-moon"></div>
+                <div class="mars-moon-1"></div>
+                <div class="mars-moon-2"></div>
+                <div class="jupiter-1"></div>
+                <div class="jupiter-2"></div>
+                <div class="jupiter-3"></div>
+                <div class="jupiter-4"></div>
+                <div class="jupiter-5"></div>
+                <div class="ringsaturn"></div>
+                <div class="astroid">
+                    <div class="ast1"></div>
+                    <div class="ast2"></div>
+                    <div class="ast3"></div>
+                    <div class="ast4"></div>
+                    <div class="ast5"></div>
+                    <div class="ast6"></div>
+                    <div class="ast7"></div>
+                    <div class="ast8"></div>
+                    <div class="ast9"></div>
+                    <div class="ast10"></div>
+                    <div class="ast11"></div>
+                    <div class="ast12"></div>
+                    <div class="ast13"></div>
+                    <div class="ast14"></div>
+                    <div class="ast15"></div>
+                    <div class="ast16"></div>
+                </div>
+            </div>
+        </section>
     </main>
 
 
     <footer>
 
     </footer>
+    <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>

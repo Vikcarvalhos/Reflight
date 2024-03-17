@@ -8,15 +8,95 @@
 body {
     font-size: 16px;
     background-image: url(./assets/web_background.png);
-
+    font-family: "Poppins", Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
 }
 
+nav{    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 2rem;
+}
+
+#logo{
+    width: 20rem;
+}
+
+.menu{
+    color: #fff;
+    text-decoration: none;
+    margin-right: 5rem;
+    position: relative;
+}
+
+.menu::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #fff; /* Adjust color as needed */
+    transition: width 0.3s;
+}
+
+.menu:hover::after {
+    width: 100%;
+}
+
+.title-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+
+.title{
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    font-family: "Poppins", Arial, Helvetica, sans-serif;
+    max-width: 50rem;
+    font-weight: 600;
+    font-size: 5rem;
+}
+
+.text{
+    color: #fff;
+    justify-content: center;
+    text-align: center;
+    font-family: "Poppins", Arial, Helvetica, sans-serif;
+    font-weight: 200;
+    font-size: 25px;
+    max-width: 50rem;
+}  
+
+#get-started{
+    font-size: 2em;
+    text-decoration: none;
+    color: #fff;
+    background-color: #ffffff00;
+    align-items: center;
+    padding: 10px 20px 10px 20px;
+    border: solid #fff 2px;
+    border-radius: 30px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#get-started:hover{
+    color: #6a0983;
+    background-color: #fff;
+}
 
 @media screen and (max-width: 768px) {
     body {
-        font-size: 18px; 
+        font-size: 18px;
+        overflow-x: hidden;
     }
-
 
     nav{
         display: flex;
@@ -48,8 +128,6 @@ body {
         font-family: "Bruno Ace SC", Arial, Helvetica, sans-serif; /* Corrigido o nome da fonte */
         color: #fff;
     }
-    
-
 
     main{
         display: flex;
