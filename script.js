@@ -3,6 +3,20 @@ let leftButton = document.getElementById('left-button');
 let rightButton = document.getElementById('right-button');
 let images = ['earth.jpg', 'mars.jpg', 'jupiter.jpg', 'saturn.jpg','uranus.jpg','neptune.jpg','mercury.jpg','venus.jpg']; // Add all your image filenames here
 let currentImageIndex = 0;
+let planetNameElement = document.querySelector('.planet-name');
+let planetDescriptionElement = document.querySelector('.planet-description');
+
+let planetInfo = {
+    'earth': {name: 'Earth', description: 'Our home planet.'},
+    'mars': {name: 'Mars', description: 'The red planet.'},
+    'jupiter': {name: 'Jupiter', description: 'The largest planet in our solar system.'},
+    'saturn': {name: 'Saturn', description: 'The planet with the rings.'},
+    'uranus': {name: 'Uranus', description: 'The planet that rotates on its side.'},
+    'neptune': {name: 'Neptune', description: 'The planet furthest from the sun.'},
+    'mercury': {name: 'Mercury', description: 'The smallest planet in our solar system.'},
+    'venus': {name: 'Venus', description: 'The hottest planet in our solar system.'}
+    // Add info for the other planets
+};
 
 let moons = {
     'earth': [document.querySelector('.earth-moon')],
@@ -28,6 +42,9 @@ leftButton.addEventListener('click', function() {
         planetElement.style.backgroundImage = 'url(./assets/planets/' + images[currentImageIndex] + ')';
     });
     hideAllMoons();
+    let currentPlanet = images[currentImageIndex].split('.')[0];
+    planetNameElement.textContent = planetInfo[currentPlanet].name;
+    planetDescriptionElement.textContent = planetInfo[currentPlanet].description;
     if (moons[images[currentImageIndex].split('.')[0]]) {
         moons[images[currentImageIndex].split('.')[0]].forEach(function(moon) {
             moon.style.display = 'flex';
@@ -36,6 +53,7 @@ leftButton.addEventListener('click', function() {
             }, 0); // Immediately after showing the moon, start the transition to opacity 1
         });
     }
+    
 });
 
 rightButton.addEventListener('click', function() {
@@ -44,6 +62,9 @@ rightButton.addEventListener('click', function() {
         planetElement.style.backgroundImage = 'url(./assets/planets/' + images[currentImageIndex] + ')';
     });
     hideAllMoons();
+    let currentPlanet = images[currentImageIndex].split('.')[0];
+    planetNameElement.textContent = planetInfo[currentPlanet].name;
+    planetDescriptionElement.textContent = planetInfo[currentPlanet].description;
     if (moons[images[currentImageIndex].split('.')[0]]) {
         moons[images[currentImageIndex].split('.')[0]].forEach(function(moon) {
             moon.style.display = 'flex';

@@ -87,9 +87,65 @@ nav{
     transition: background-color 0.3s, color 0.3s;
 }
 
+.destination-select{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 40vw;
+}
+
+.destination-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.planet-name{
+    color: #fff;
+    font-family: "Poppins", Arial, Helvetica, sans-serif;
+    font-size: 5rem;
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.planet-description{
+    color: #fff;
+    font-family: "Poppins", Arial, Helvetica, sans-serif;
+    font-weight: 200;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 #get-started:hover{
     color: #6a0983;
     background-color: #fff;
+}
+
+#left-button{
+    width: 4rem;
+    height: 4rem;
+    font-size: 2rem;
+    align-items: center;
+    background-color: #6a0983;
+    color: #fff;
+    border: solid transparent 1px;
+    border-radius: 50%;
+}
+
+#right-button{
+    width: 4rem;
+    height: 4rem;
+    font-size: 2rem;
+    align-items: center;
+    background-color: #6a0983;
+    color: #fff;
+    border: solid transparent 1px;
+    border-radius: 50%;
 }
 
 @media screen and (max-width: 768px) {
