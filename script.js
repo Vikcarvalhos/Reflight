@@ -74,3 +74,91 @@ rightButton.addEventListener('click', function() {
         });
     }
 });
+
+const submitButton = document.querySelector("form button.form-button")
+const emailInput = document.querySelector("input#email")
+
+submitButton.addEventListener("click", submitForm)
+
+const submit = []
+
+function submitForm(event) {
+    event.preventDefault()
+
+    const name = document.querySelector("input#name").value
+    const email = emailInput.value
+
+    if (validateEmail(email)) {
+        const formData = {
+            name,
+            email
+        }
+
+        submit.push(formData)
+
+        displaySubmit()
+        resetarForm()
+
+    } else {
+        showError("Please enter a valid email address. It must contain @ and a '.'")
+    }
+    
+}
+
+function validateEmail(email) {
+    const teste = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+    return teste.test(email)
+}
+
+function displaySubmit() {
+    console.log(submit)
+}
+
+function resetarForm() {
+    document.querySelector("input#name").value = ""
+    emailInput.value = ""
+}
+
+function showError(message) {
+
+    const existingError = document.querySelector('.error-message');
+    if (existingError) {
+        existingError.remove();
+    }
+
+    const errorElement = document.createElement("p");
+    errorElement.className = "error-message";
+    errorElement.textContent = message;
+
+    emailInput.parentNode.insertBefore(errorElement, emailInput);
+
+    setTimeout(() => {
+        errorElement.remove();
+    }, 3000);
+}
+
+document.querySelector('.form-button').addEventListener('click', function(event) {
+    event.preventDefault();
+
+    const existingError = document.querySelector('.error-message');
+    if (!existingError) {
+        const thankyouMessage = document.getElementById('thankyou-message');
+        thankyouMessage.style.display = 'block';
+        thankyouMessage.style.animation = '1s slideIn forwards';
+
+        setTimeout(function() {
+            thankyouMessage.style.animation = '1s slideOut forwards';
+        }, 4000);
+
+        setTimeout(function() {
+            thankyouMessage.style.display = 'none';
+        }, 5000);
+    }
+
+});
+
+document.querySelector('.forms').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    
+});

@@ -14,9 +14,8 @@
         <img id="logo" src="./assets/marca-relifght/logotipo.svg" alt="logotipo">
         <span> 
             <a href="#" class="menu">Home</a>
-            <a href="#" class="menu">Galery</a>
-            <a href="#" class="menu">Team</a>
-            <a href="#" class="menu">Get</a>
+            <a href="#destination-1" class="menu">Destination</a>
+            <a href="#form" class="menu">Contact</a>
             <a href="./table.html" class="menu">Table</a>
          </span>
     </nav>
@@ -28,9 +27,9 @@
                 living a party
             </h1>
             <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio quas quos eligendi accusamus rerum. Eum numquam eveniet voluptates exercitationem vero labore, fugiat soluta quidem consequatur voluptatibus eaque deleniti commodi perferendis.</p>
-            <a id="get-started" href="#" class="btn">Get started</a>
+            <a class="get-started btn" href="#">Get started</a>
         </section>
-        <section class="destination">
+        <section id='destination-1' class="destination">
             <div class="destination-select">
                 <div class="destination-button-left">
                     <button id="left-button"> &lt </button>
@@ -38,6 +37,7 @@
                 <div class="destination-texts">
                     <h2 class="planet-name">Earth</h2>
                     <p class="planet-description">Our home planet</p>
+                    <a class="select-destination-btn" href="#">Select Your Destination</a>
                 </div>
                 <div class="destination-button-right">
                     <button id="right-button"> &gt </button>
@@ -54,11 +54,41 @@
                 <div class="jupiter-5"></div>
             </div>
         </section>
+        <section id="form">
+            <div id="tittle-form">
+                <h2>Fly into space NOW!!!</h2>
+            </div>
+            <form class="forms slide-in">
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="name">Name</label>
+                  <input id="name" required="" placeholder="Insira seu nome" class="form-input" type="text">
+                </div>
+    
+                <div class="form-group">
+                  <label class="form-label" for="email">Email</label>
+                  <input id="email" required="" placeholder="Seu melhor email" class="form-input" name="email" id="email" type="email">
+                </div>
+                <button class="form-button" type="submit">Send</button>
+            </form>
+            <div id="thankyou-message" style="display: none;">
+                <p>Thanks for reaching out! We will reply shortly.</p>
+            </div>
+        </section>
     </main>
-
-
     <footer>
-
+        <div id="info-footer">
+            <div id="img-footer">
+                <img src="./assets/marca-relifght/reflight preto.svg" alt="img-footer">
+            </div>
+            <div id="links">
+                <div class="list">
+                    <a class="hover-underline-footer" href="#">Home</a>
+                    <a class="hover-underline-footer" href="#destination">Destination</a>
+                    <a class="hover-underline-footer" href="#form">Contact</a>
+                </div>
+            </div>
+        </div>
     </footer>
     <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>

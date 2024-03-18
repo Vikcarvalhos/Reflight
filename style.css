@@ -75,7 +75,7 @@ nav{
     max-width: 50rem;
 }  
 
-#get-started{
+.get-started{
     font-size: 2em;
     text-decoration: none;
     color: #fff;
@@ -94,12 +94,12 @@ nav{
     width: 40vw;
 }
 
-.destination-text{
+.destination-texts{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 2rem;
+    gap: 1rem;
 }
 
 .planet-name{
@@ -115,13 +115,28 @@ nav{
 .planet-description{
     color: #fff;
     font-family: "Poppins", Arial, Helvetica, sans-serif;
-    font-weight: 200;
+    font-weight: 400;
+    font-size: 24px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-#get-started:hover{
+.get-started:hover{
+    color: #6a0983;
+    background-color: #fff;
+}
+
+.select-destination-btn{
+    color: white;
+    border: solid white 1px;
+    text-decoration: none;
+    padding: 1rem;
+    border-radius: 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.select-destination-btn:hover{
     color: #6a0983;
     background-color: #fff;
 }
@@ -164,6 +179,173 @@ nav{
 
 #right-button:not(:hover){
     transition: all 0.5s;
+}
+
+section#form{
+    padding: 5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+}
+
+img#img-form{
+    width: 24rem;
+}
+
+#tittle-form{
+    display: flex;
+    font-size: 1.7rem;
+    flex-direction: column;
+    font-family: Poppins, sans-serif;
+    text-align: center;
+    color: aliceblue;
+}
+
+.forms {
+    width: 38rem; 
+    padding: 1.25rem; 
+    background-color: #2F3033;
+    border-radius: 30px; 
+}
+  
+.form-group {
+    margin-bottom: 1.25rem; 
+}
+  
+.form-label {
+    display: block;
+    font-weight: bold;
+    padding-bottom: 0.8rem;
+    color: #fff;
+    font-family:'FF Unit Slab Pro', sans-serif;
+}
+  
+.form-input {
+    width: 95%;
+    padding: 0.9rem; 
+    border: none;
+    font-size: 1rem;
+    font-family:'FF Unit Slab Pro', sans-serif;
+    background-color: #fff;
+    color: #333;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+  
+textarea.form-input {
+    height: 6.25rem; 
+}
+  
+.form-button {
+    display: block;
+    width: 100%;
+    padding: 0.65rem; 
+    background-color: #6a0983;
+    color: #fff;
+    border: none;
+    border-radius: 20px; 
+    cursor: pointer;
+    font-size: 1.3rem;
+    transition: .9s;
+}
+  
+.form-button:hover {
+    box-shadow: inset 0 -100px 0 0 #c90ef8;
+}
+
+.error-message {
+    color: red;
+}
+
+div#info-footer{
+    display: flex;
+    gap: 10rem;
+}
+
+div#links{
+    display: flex;
+    gap: 4rem;
+    padding-right: 4rem;
+}
+
+div.list{
+    display: flex;
+    flex-direction: column;
+    gap: 1.3rem;
+}
+
+div.list ul{
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+}
+
+div.list a, li{
+    display: flex;
+    flex-direction: column;
+    gap: 1.3rem;
+    text-decoration: none;
+}
+
+.link{
+    cursor: pointer;
+}
+
+footer{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
+    background-color: #ffffff;
+    padding: 5rem;
+    width: 100%;
+    display: flex;
+    border-radius: 20px 20px 0px 0px;
+}
+
+footer img{
+  width: 10vw;
+}
+
+
+footer a, li{
+  font-family:'FF Unit Slab Pro', sans-serif;
+  color: #313131;
+  font-weight: 500;
+  font-size: 1.2rem;
+  list-style: none;
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideOut {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+#thankyou-message {
+    position: fixed;
+    font-family: Inter, sans-serif;
+    font-size: 20px;
+    top: 50%;
+    left: 0;
+    width: 30vw;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border: 0px solid #ced4da;
+    border-radius: 0px 20px 20px 0px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    display: none;
 }
 
 @media screen and (max-width: 768px) {
@@ -267,4 +449,3 @@ nav{
     transform: translateY(0);
     }
 }
-
