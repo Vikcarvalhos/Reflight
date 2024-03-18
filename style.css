@@ -137,6 +137,15 @@ nav{
     border-radius: 50%;
 }
 
+#left-button:hover{
+    border: solid #fff 1px;
+    transition: all 0.5s;
+}
+
+#left-button:not(:hover){
+    transition: all 0.5s;
+}
+
 #right-button{
     width: 4rem;
     height: 4rem;
@@ -146,6 +155,15 @@ nav{
     color: #fff;
     border: solid transparent 1px;
     border-radius: 50%;
+}
+
+#right-button:hover{
+    border: solid #fff 1px;
+    transition: all 0.5s;
+}
+
+#right-button:not(:hover){
+    transition: all 0.5s;
 }
 
 @media screen and (max-width: 768px) {
